@@ -18,4 +18,5 @@ set smarttab
 
 " See http://kien.github.io/ctrlp.vim/
 let g:ctrlp_root_markers=['package']
-
+" See https://github.com/mhinz/vim-signify
+let g:signify_vcs_list = [ 'perforce', 'git' ]
