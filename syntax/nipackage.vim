@@ -42,7 +42,7 @@ syn match   niVersion         "\<\d\+\.\d\+\.\d\+[abfd]\d\+\>"
 syn match   niOldVersion      "\<\d\d\d\+[adbf]\d\+\(\.\d\+\)\?\>"
 syn match   niNamespace       "n[A-Z]\+\d\d\d"
 
-syn match   niComment         "#.*"
+syn region  niComment         start="#" skip="\\$" end="$" keepend contains=@Spell
 
 hi def link niSections        Structure
 hi def link niDepModifiers    Keyword

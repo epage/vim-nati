@@ -7,7 +7,7 @@ endif
 syn keyword ocmKeyword deletelib add
 syn keyword ocmMode    U K S
 
-syn match   ocmComment "#.*"
+syn region  ocmComment start="#" skip="\\$" end="$" keepend contains=@Spell
 
 hi def link ocmComment Comment
 hi def link ocmKeyword Keyword

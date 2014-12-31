@@ -20,9 +20,10 @@ syn keyword mruKeyword starTriggerType subTopography subsystem visibility waypoi
 
 syn keyword mruBoolean true false
 syn keyword mruValue   source destination invert common advanced private
-syn match   mruNumber "\<\d\+\>"
-syn match   mruComment "\(//\|;\).*"
-syn region  mruString  start=+"+ end=+"+
+syn match   mruNumber  "\<\d\+\>"
+syn region  mruComment start="//" skip="\\$" end="$" keepend contains=@Spell
+syn region  mruComment start=";" skip="\\$" end="$" keepend contains=@Spell
+syn region  mruString  start=+"+ end=+"+ contains=@Spell
 
 hi def link mruBoolean Boolean
 hi def link mruKeyword Keyword

@@ -4,6 +4,9 @@ if exists("b:current_syntax")
   finish
 endif
 
+" TODO Enable spell checking for comments (and strings?) and remove this hack
+syn spell notoplevel
+
 syn keyword rbmAttribute Readable Writable Strobe ActiveLowStrobe Decoded
 syn keyword rbmBoolean   true false on off
 

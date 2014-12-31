@@ -11,8 +11,8 @@ syn keyword ddsKeyword     u32array i32array stringarray refarray
 syn keyword ddsKeyword     version declare
 
 syn keyword ddsValue       true false null
-syn match   ddsComment     "//.*"
-syn region  ddsString      start=+"+ end=+"+
+syn region  ddsComment     start="//" skip="\\$" end="$" keepend contains=@Spell
+syn region  ddsString      start=+"+ end=+"+ contains=@Spell
 syn match   ddsNumber      "\<\d\+\>"
 
 hi def link ddsComment     Comment
