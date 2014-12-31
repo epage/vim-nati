@@ -28,14 +28,12 @@ syn keyword niDepModifiers    perforcePath oldestCompatibleVersion
 
 syn keyword niSections        excludeCommand
 
-" platform regex:
-" \(win\(32U\|64U\|32K\|xpK\|2000K\|xp64K\|nt4K\)\|linux\(U\|24K\)\|pharlap\)
-" \(release\|debug\)
-" \(user\|kernel\|single\)
-
 syn match   niPlatform        "\(user\|kernel\|single\)Type"
-" ugh
-syn match   niPlatform        "\(user\|kernel\|single\|win\(64U\|32U\|32K\|2000K\|xpK\|xp64K\|nt4K\)\|pharlap\|linux\(U\|24K\)\)\w\+"
+syn match   niPlatform        "\(user\|kernel\|single\)\w\+"
+syn match   niPlatform        "win\(64U\|32U\|32K\|2000K\|xpK\|xp64K\|nt4K\)\w\+"
+syn match   niPlatform        "pharlap\w\+"
+syn match   niPlatform        "linux\(U\|24K\)\w\+"
+syn match   niPlatform        "macosx\(U\|K\)\w\+"
 
 syn region  niString          start=+"+ end=+"+
 syn match   niPerforce        "\(\(penguin\|perforce\):\)\?\/\/\(\S\+\/\)\+[^;]\+"
