@@ -16,6 +16,8 @@ set softtabstop=3
 set expandtab
 set smarttab
 
+autocmd Filetype cs setlocal ts=4 sts=4 sw=4
+
 " See http://kien.github.io/ctrlp.vim/
 let g:ctrlp_root_markers=['package']
 " See https://github.com/mhinz/vim-signify
